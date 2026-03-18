@@ -82,9 +82,7 @@ At each time step, we:
 - Evolve the tangent vector  
 - Accumulate the logarithm of its norm:
   
-  $$
-  \lambda(t) = \frac{1}{t} \log \frac{|\mathbf{w}(t)|}{|\mathbf{w}(0)|}
-  $$
+$$ \lambda = \lim_{t \to \infty} \frac{1}{t} \ln \left( \frac{\|\mathbf{w}(t)\|}{\|\mathbf{w}(0)\|} \right) $$
 
 - Renormalize the vector to prevent overflow/underflow  
 
@@ -119,7 +117,7 @@ pip install numpy matplotlib
 
 Simply execute the script. It will:
 
-- Set the parameters $(N,\; h,\; n = 4)$  
+- Set the parameters $(N\; h,\; n = 4)$  
 - Generate an initial condition
 - Evolve the system for $t$ time units  
 - Compute the largest Lyapunov exponent and store its time evolution in `L`  
