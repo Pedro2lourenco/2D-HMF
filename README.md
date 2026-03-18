@@ -113,6 +113,7 @@ You can install the required dependencies using:
 
 ```bash
 pip install numpy matplotlib
+```
 
 ### Running the Simulation
 
