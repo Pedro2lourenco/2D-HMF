@@ -26,8 +26,6 @@ lyap_num = 2*N  # Number of Lyapunov exponents (dimension of tangent space)
 # Initial perturbation vector (random normalized vector)
 w = 2*np.random.randint(4*N)-np.ones(4*N)
 w = w/np.dot(w,w)
-
-
 # =============================
 # EQUATIONS OF MOTION
 # =============================
@@ -38,7 +36,7 @@ def evolveQ(X,Y,PX,PY,delta):
     Y += PY*delta
     
     return(X,Y)
-
+    
 def evolveP(X,Y,PX,PY,delta):
     # Compute mean-field terms (magnetizations and correlations)
     M1x = np.sum(np.cos(X))/N
@@ -64,8 +62,6 @@ def evolveP(X,Y,PX,PY,delta):
     PY += Fy*delta
     
     return(PX,PY)
-
-
 # =============================
 # SUZUKI-TROTTER 4th ORDER COEFFICIENTS
 # =============================
